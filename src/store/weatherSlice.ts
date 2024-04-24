@@ -6,6 +6,8 @@ interface Weather {
   city: string;
   temperature: number;
   conditions: string;
+  humidity:string;
+  wind:string;
 }
 
 interface WeatherState {
@@ -45,6 +47,8 @@ export const fetchWeather = (city: string): AppThunk => async (dispatch) => {
           city: data.name,
           temperature: data.main.temp,
           conditions: data.weather[0].main,
+          humidity:data.main.humidity,
+          wind:data.wind.speed,
         })
       );
     } else {

@@ -14,7 +14,7 @@ const Home: React.FC = () => {
     
       <Col lg={6} xs={2}></Col>
       <Col lg={12} xs={20}>
-        <Flex justify='center'>
+        <Flex justify='center' style={{flexDirection:"column"}}>
       <Typography.Title level={2}>Weather Information</Typography.Title>
       <CityForm />
       <WeatherDisplay />
